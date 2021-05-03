@@ -81,6 +81,7 @@ section{
     padding-bottom: 20px;
 }
 
+/* linha com imagem*/
 .title{
     display: inline-flex;
     color:white;
@@ -98,7 +99,7 @@ section{
     width: 98%;
 }
 
-
+/* caixa de arma */
 .gridBox{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -114,6 +115,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 .boxItem *{
     padding-top: 5px;
@@ -127,8 +129,11 @@ section{
 .boxItem img{
     width: 200px;
 }
+.boxItem .price{
+    color: aquamarine;
+}
 
-@media (max-width: 999px) {
+@media screen and (max-width: 999px) {
     .nav-list {
         position: fixed;
         z-index: 6;
@@ -140,42 +145,40 @@ section{
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
-        opacity: 0;
+        visibility: hidden;
+        display:initial;
     }
     .nav-list li{
         margin-left: 0;
         opacity: 1;
         padding: 15px;
+        text-align: center;
     }  
     .mobile-menu {
         display: block;
     }
     .title div{
-    display: none;
+        display: none;
     }
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .gridBox{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 15px;
     }
 }
-@media (max-width: 915px) {
+@media screen and (max-width: 915px) {
     .gridBox{
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 15px;
     }
 }
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .gridBox{
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 15px;
     }
-}
-
-.nav-list.active{
-    transform: translateX(0%);
 }
