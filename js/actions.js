@@ -1,3 +1,4 @@
+// Trigger de abrir e fechar o menubar
 function menuShow(){
     let navbar = document.getElementById("nav-list");
     if(navbar.style.visibility === 'visible'){
@@ -10,11 +11,13 @@ function menuShow(){
     }
 }
 
+// Adiciona função de rolamento nos links
 const menuItems = document.querySelectorAll('.nav-list a[href^="#"]');
 menuItems.forEach(item => {
 	item.addEventListener('click', scrollTo);
 });
 
+// Realiza um rolamento até uma id
 function scrollTo(e){
     e.preventDefault();
     menuItems.forEach(item => {
@@ -31,7 +34,7 @@ function scrollTo(e){
     smoothScrollTo( 0 , pos);
 }
 
-
+// Rolamento Suave baseado em 60 fps, obs não fui eu que fiz codigo externo
 function smoothScrollTo(endX, endY, duration) {
     const startX = window.scrollX || window.pageXOffset;
     const startY = window.scrollY || window.pageYOffset;
@@ -57,4 +60,18 @@ function smoothScrollTo(endX, endY, duration) {
       window.scroll(newX, newY);
     }, 1000 / 60); // 60 fps
   };
+
+// adiciona uma caixa para ver a inspeção de skins
+function fullBox(){
+  let full = document.querySelectorAll(".boxFull")[0];
+  if(full.style.visibility === 'visible'){
+    full.style.visibility = 'hidden';
+    full.style.display = 'none';
+  }
+  else{
+    full.style.visibility = 'visible';
+    full.style.display = 'flex';
+  }
+}
+
 

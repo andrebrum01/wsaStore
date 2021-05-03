@@ -1,3 +1,4 @@
+/* Config gerais */
 html,body{
     background-color: #1C1715;
     overflow-x: hidden;
@@ -12,6 +13,8 @@ html,body{
     box-sizing: border-box;
 }
 
+
+/* Links do site */
 a {
     color: #fff;
     text-decoration: none;
@@ -34,7 +37,7 @@ a:hover {
     height: 50px;
 }
 
-
+/* Header */
 nav {
     z-index: 5;
     position: fixed;
@@ -54,6 +57,8 @@ main img{
     width: 100vw;    
 }
 
+
+/* NavBar */
 .nav-list{
     list-style: none;
     display: flex;
@@ -133,6 +138,23 @@ section{
     color: aquamarine;
 }
 
+/* Inspeção de Skin */
+.boxFull{
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* Responsividade do projeto */
 @media screen and (max-width: 999px) {
     .nav-list {
         position: fixed;
